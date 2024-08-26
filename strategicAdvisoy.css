@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* General reset and basic styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    padding: 0px 35px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Centering the logo */
+.logo {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Right-aligned 'en' div */
+.en {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    /* No need for align-items or justify-content to center everything */
+}
+
+/* General Styles */
+.about {
+    background: url(69.jfif) no-repeat left;
+    background-size: 40%;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.inner-section {
+    width: 45%;
+    float: right;
+    background-color: #E4F6F8;
+    padding: 140px;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    transform: perspective(1000px) rotateY(-10deg);
+    transform-origin: center;
+}
+
+.inner-section h1 {
+    font-size: 69px;
+    font-weight: 900;
+    font-style: italic;
+    color: #1C355E;
+}
+
+.text {
+    font-size: 16px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.skills button {
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    width: 200px;
+    background-color: #00999c;
+    color: white;
+    cursor: pointer;
+}
+
+.skills button:hover {
+    transition: 1s;
+    background-color: #ecf5f5;
+    color: #00999c;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .inner-section {
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .about {
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+
+    .inner-section {
+        width: 100%;
+        float: none;
+        /* Removes floating on smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        background-size: cover;
+        /* Ensures the image covers the background */
+        background-position: center;
+        /* Centers the background image */
+        padding: 50px 20px;
+    }
+
+    .inner-section {
+        padding: 40px;
+        text-align: center;
+        /* Centers text content on smaller screens */
+        box-shadow: none;
+        /* Simplifies the design on small screens */
+    }
+
+    .inner-section h1 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .text {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .skills button {
+        font-size: 20px;
+        padding: 6px;
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about {
+        padding: 30px 10px;
+    }
+
+    .inner-section {
+        padding: 30px;
+    }
+
+    .skills button {
+        font-size: 18px;
+        padding: 5px;
+        width: 150px;
+    }
+}
+
+.heading-container {
+    margin-top: 20vh !important;
+    /* Space below the text box */
+    text-align: left;
+    width: 60%;
+    margin: auto;
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.heading-container h4 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.heading-container h2 {
+    color: #1C355E;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text-box {
+        left: 40px;
+        /* Reduce left spacing on smaller screens */
+        width: 300px;
+        /* Adjust the size */
+        height: 100px;
+        font-size: 20px;
+    }
+
+    .heading-container {
+        margin-top: 0px;
+        /* Adjust margin for smaller screens */
+        width: 80%;
+        font-size: 20px;
+    }
+}
+
+.side {
+    margin-top: 100px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.side .img {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.side .img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.side .txt {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.side .txt h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #1C355E;
+    font-weight: 900;
+}
+
+.side .txt p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #545454;
+    text-align: justify;
+}
+
+.side .txt h6 {
+    font-size: 18px;
+    color: #1C355E;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .side {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .side .img,
+    .side .txt {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .side .txt h2 {
+        font-size: 24px;
+    }
+
+    .side .txt p,
+    .side .txt h6 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .side {
+        padding: 20px;
+    }
+
+    .side .txt h2 {
+        font-size: 22px;
+    }
+
+    .side .txt p,
+    .side .txt h6 {
+        font-size: 14px;
+    }
+}
+
+.side-reverse {
+    display: flex;
+    margin-top: 100px !important;
+    flex-direction: row;
+    /* Flex direction remains row */
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.side-reverse .txt-reverse {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.side-reverse .img-reverse {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    /* Padding on the left for spacing */
+}
+
+.side-reverse .img-reverse img {
+    width: 100%;
+    /* Same width as the original section */
+    height: auto;
+    max-height: 600px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.side-reverse .txt-reverse h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #1C355E;
+    font-weight: 900;
+}
+
+.side-reverse .txt-reverse p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #545454;
+    text-align: justify;
+}
+
+.side-reverse .txt-reverse h6 {
+    font-size: 18px;
+    color: #1C355E;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .side-reverse {
+        flex-direction: column-reverse;
+        /* Flip order for mobile */
+        padding: 30px;
+    }
+
+    .side-reverse .img-reverse,
+    .side-reverse .txt-reverse {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .side-reverse .img-reverse img {
+        width: 80%;
+        max-height: 400px;
+    }
+
+    .side-reverse .txt-reverse h2 {
+        font-size: 24px;
+    }
+
+    .side-reverse .txt-reverse p,
+    .side-reverse .txt-reverse h6 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .side-reverse {
+        padding: 20px;
+    }
+
+    .side-reverse .img-reverse img {
+        width: 90%;
+        max-height: 300px;
+    }
+
+    .side-reverse .txt-reverse h2 {
+        font-size: 22px;
+    }
+
+    .side-reverse .txt-reverse p,
+    .side-reverse .txt-reverse h6 {
+        font-size: 14px;
+    }
+}
+
+.numbers {
+    margin: auto;
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    text-align: center;
+    padding: 0 20px; /* Added padding for better spacing on mobile */
+}
+
+.count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.num {
+    color: #1C355E;
+    font-size: 100px;
+    font-weight: 900;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .numbers {
+        flex-direction: column; /* Stack items vertically */
+        gap: 30px; /* Adjust gap for better spacing */
+        padding: 20px; /* Added padding to ensure content doesn't touch edges */
+    }
+
+    .num {
+        font-size: 80px !important; /* Reduced font size for smaller screens */
+    }
+
+    .count p {
+        font-size: 1.5rem !important; /* Adjusted font size for text */
+    }
+}
+
+@media (max-width: 480px) {
+    .num {
+        font-size: 40px; /* Further reduced font size for very small screens */
+    }
+
+    .count p {
+        font-size: 1rem; /* Further adjusted font size for text */
+    }
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #cff4f8;
+    padding: 70px 0;
+    margin-top: 100px;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #000000;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 300;
+    color: #000000;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000000;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #000000;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
